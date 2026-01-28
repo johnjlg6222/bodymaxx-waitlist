@@ -4,11 +4,15 @@ import { Inter } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
-import { Suspense } from 'react';
+import dynamic from 'next/dynamic';
 import { routing } from '@/i18n/routing';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import ParticleBackground from '@/components/ui/ParticleBackground';
+
+const ParticleBackground = dynamic(
+  () => import('@/components/ui/ParticleBackground'),
+  { ssr: false }
+);
 
 const inter = Inter({
   subsets: ['latin'],
@@ -69,9 +73,7 @@ export default async function LocaleLayout({
             <input type="text" name="locale" />
           </form>
 
-          <Suspense fallback={null}>
-            <ParticleBackground />
-          </Suspense>
+          <ParticleBackground />
           <Header />
           <main className="relative z-10">{children}</main>
           <Footer />

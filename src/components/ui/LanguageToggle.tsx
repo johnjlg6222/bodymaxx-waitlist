@@ -32,6 +32,7 @@ export default function LanguageToggle() {
               ? 'bg-primary text-white'
               : 'text-white/60 hover:text-white'
           }`}
+          suppressHydrationWarning
         >
           {lang.toUpperCase()}
         </motion.button>

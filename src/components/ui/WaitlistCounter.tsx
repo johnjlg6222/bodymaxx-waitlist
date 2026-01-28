@@ -60,7 +60,7 @@ export default function WaitlistCounter({ targetNumber = 2847, className }: Wait
         </div>
         <p className="text-white/60 text-sm">
           {t('counterPrefix')}{' '}
-          <span className="text-white font-bold tabular-nums">
+          <span className="text-white font-bold tabular-nums" suppressHydrationWarning>
             {count.toLocaleString()}+
           </span>{' '}
           {t('counterSuffix')}
