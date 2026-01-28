@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "title": "BodyMaxx AI - Analyse Corporelle par Intelligence Artificielle",
+    "description": "Transformez votre physique avec l'IA. Scan corporel avancé, suivi de progression et programmes personnalisés."
+  },
+  "header": {
+    "logo": "BodyMaxx",
+    "tagline": "AI"
+  },
+  "hero": {
+    "badge": "Bientôt disponible",
+    "headline": "Transformez votre physique avec l'IA",
+    "tagline": "Scannez. Analysez. Transformez.",
+    "description": "Découvrez la puissance de l'intelligence artificielle pour analyser votre composition corporelle et atteindre vos objectifs fitness.",
+    "emailPlaceholder": "Entrez votre email",
+    "ctaButton": "Rejoindre la liste d'attente",
+    "successMessage": "Merci ! Vous êtes sur la liste.",
+    "errorMessage": "Une erreur s'est produite. Veuillez réessayer.",
+    "counterPrefix": "Déjà",
+    "counterSuffix": "personnes inscrites"
+  },
+  "features": {
+    "title": "Fonctionnalités Révolutionnaires",
+    "subtitle": "Une technologie de pointe au service de votre transformation",
+    "scan": {
+      "title": "Scan IA Corporel",
+      "description": "Analyse précise de votre composition corporelle en quelques secondes grâce à notre technologie IA avancée."
+    },
+    "progress": {
+      "title": "Suivi de Progression",
+      "description": "Visualisez votre évolution avec des graphiques détaillés et des insights personnalisés."
+    },
+    "exercises": {
+      "title": "2000+ Exercices",
+      "description": "Bibliothèque complète d'exercices avec tutoriels vidéo et programmes adaptés à vos objectifs."
+    },
+    "community": {
+      "title": "Communauté Active",
+      "description": "Rejoignez des milliers de passionnés, partagez vos progrès et restez motivé."
+    }
+  },
+  "howItWorks": {
+    "title": "Comment ça marche",
+    "subtitle": "4 étapes simples vers votre transformation",
+    "step1": {
+      "number": "01",
+      "title": "Téléchargez l'app",
+      "description": "Disponible sur iOS et Android, installez l'application en quelques secondes."
+    },
+    "step2": {
+      "number": "02",
+      "title": "Prenez un scan",
+      "description": "Utilisez votre caméra pour capturer votre composition corporelle en temps réel."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Obtenez votre analyse",
+      "description": "Notre IA analyse vos données et génère un rapport détaillé personnalisé."
+    },
+    "step4": {
+      "number": "04",
+      "title": "Progressez",
+      "description": "Suivez vos progrès, ajustez vos objectifs et transformez votre physique."
+    }
+  },
+  "cta": {
+    "headline": "Prêt à transformer votre physique ?",
+    "description": "Rejoignez la liste d'attente et soyez parmi les premiers à découvrir BodyMaxx AI.",
+    "comingSoon": "Bientôt sur"
+  },
+  "testimonials": {
+    "title": "Ce que disent nos bêta-testeurs",
+    "subtitle": "De vrais retours d'utilisateurs qui transforment leur parcours fitness",
+    "testimonial1": {
+      "quote": "Le scan corporel IA est incroyablement précis. J'ai essayé d'autres applications mais rien n'égale la précision de BodyMaxx.",
+      "name": "Marcus T.",
+      "role": "Passionné de fitness"
+    },
+    "testimonial2": {
+      "quote": "Enfin une app qui suit ma progression de manière significative. Les visualisations me motivent chaque jour.",
+      "name": "Sarah K.",
+      "role": "Coach personnel"
+    },
+    "testimonial3": {
+      "quote": "J'étais sceptique sur les apps fitness IA, mais BodyMaxx a changé ma perspective. Les insights personnalisés sont révolutionnaires.",
+      "name": "David L.",
+      "role": "Marathonien"
+    },
+    "testimonial4": {
+      "quote": "La bibliothèque d'exercices est immense et les conseils de forme m'ont aidé à corriger des erreurs que j'ignorais.",
+      "name": "Emma R.",
+      "role": "Professeure de yoga"
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur BodyMaxx AI",
+    "items": [
+      {
+        "question": "Comment fonctionne le scan corporel IA ?",
+        "answer": "Notre IA utilise la caméra de votre téléphone pour créer un modèle 3D de votre corps. Elle analyse les mesures clés et la composition corporelle grâce à des algorithmes de vision par ordinateur avancés, le tout traité localement sur votre appareil pour votre confidentialité."
+      },
+      {
+        "question": "Mes données sont-elles sécurisées et privées ?",
+        "answer": "Absolument. Vos scans corporels sont traités sur l'appareil et jamais téléchargés sur des serveurs externes. Toutes les données personnelles sont cryptées et vous avez un contrôle total sur ce que vous partagez."
+      },
+      {
+        "question": "Quels appareils sont compatibles ?",
+        "answer": "BodyMaxx AI sera disponible sur iOS (iPhone 8 et plus récent) et Android (appareils avec support ARCore). Nous optimisons pour la meilleure expérience sur tous les appareils supportés."
+      },
+      {
+        "question": "Quelle est la précision de l'analyse corporelle ?",
+        "answer": "Notre IA atteint une précision comparable aux scans DEXA professionnels pour la plupart des métriques de composition corporelle. Plus vous utilisez l'app, plus votre référence personnalisée devient précise."
+      },
+      {
+        "question": "Y aura-t-il une version gratuite ?",
+        "answer": "Oui ! Nous offrirons un niveau gratuit avec les fonctions de base de scan et suivi. Les fonctionnalités premium comme les analyses avancées, l'historique illimité et les programmes personnalisés seront disponibles via abonnement."
+      },
+      {
+        "question": "Quand l'application sera-t-elle lancée ?",
+        "answer": "Nous sommes actuellement en bêta test fermée. Rejoignez la liste d'attente pour être parmi les premiers à y accéder lors du lancement public. Les premiers inscrits recevront des avantages exclusifs."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Transformez votre physique avec l'intelligence artificielle.",
+    "legal": "Mentions légales",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "copyright": "© 2025 BodyMaxx AI. Tous droits réservés."
+  }
+}

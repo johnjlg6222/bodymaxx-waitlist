@@ -1,0 +1,132 @@
+{
+  "metadata": {
+    "title": "BodyMaxx AI - AI-Powered Body Composition Analysis",
+    "description": "Transform your physique with AI. Advanced body scanning, progress tracking, and personalized programs."
+  },
+  "header": {
+    "logo": "BodyMaxx",
+    "tagline": "AI"
+  },
+  "hero": {
+    "badge": "Coming Soon",
+    "headline": "Transform Your Physique with AI",
+    "tagline": "Scan. Analyze. Transform.",
+    "description": "Discover the power of artificial intelligence to analyze your body composition and achieve your fitness goals.",
+    "emailPlaceholder": "Enter your email",
+    "ctaButton": "Join the Waitlist",
+    "successMessage": "Thank you! You're on the list.",
+    "errorMessage": "An error occurred. Please try again.",
+    "counterPrefix": "Already",
+    "counterSuffix": "people signed up"
+  },
+  "features": {
+    "title": "Revolutionary Features",
+    "subtitle": "Cutting-edge technology at the service of your transformation",
+    "scan": {
+      "title": "AI Body Scanning",
+      "description": "Precise analysis of your body composition in seconds using our advanced AI technology."
+    },
+    "progress": {
+      "title": "Progress Tracking",
+      "description": "Visualize your evolution with detailed graphs and personalized insights."
+    },
+    "exercises": {
+      "title": "2000+ Exercises",
+      "description": "Complete exercise library with video tutorials and programs tailored to your goals."
+    },
+    "community": {
+      "title": "Active Community",
+      "description": "Join thousands of enthusiasts, share your progress and stay motivated."
+    }
+  },
+  "howItWorks": {
+    "title": "How It Works",
+    "subtitle": "4 simple steps to your transformation",
+    "step1": {
+      "number": "01",
+      "title": "Download the app",
+      "description": "Available on iOS and Android, install the app in seconds."
+    },
+    "step2": {
+      "number": "02",
+      "title": "Take a scan",
+      "description": "Use your camera to capture your body composition in real time."
+    },
+    "step3": {
+      "number": "03",
+      "title": "Get your analysis",
+      "description": "Our AI analyzes your data and generates a detailed personalized report."
+    },
+    "step4": {
+      "number": "04",
+      "title": "Track & improve",
+      "description": "Follow your progress, adjust your goals and transform your physique."
+    }
+  },
+  "cta": {
+    "headline": "Ready to transform your physique?",
+    "description": "Join the waitlist and be among the first to discover BodyMaxx AI.",
+    "comingSoon": "Coming soon on"
+  },
+  "testimonials": {
+    "title": "What Our Beta Testers Say",
+    "subtitle": "Real feedback from early users transforming their fitness journey",
+    "testimonial1": {
+      "quote": "The AI body scan is incredibly accurate. I've tried other apps but nothing comes close to the precision BodyMaxx delivers.",
+      "name": "Marcus T.",
+      "role": "Fitness Enthusiast"
+    },
+    "testimonial2": {
+      "quote": "Finally an app that tracks my progress in a meaningful way. The visualizations keep me motivated every single day.",
+      "name": "Sarah K.",
+      "role": "Personal Trainer"
+    },
+    "testimonial3": {
+      "quote": "I was skeptical about AI fitness apps, but BodyMaxx changed my perspective. The personalized insights are game-changing.",
+      "name": "David L.",
+      "role": "Marathon Runner"
+    },
+    "testimonial4": {
+      "quote": "The exercise library is massive and the form guidance helped me correct mistakes I didn't know I was making.",
+      "name": "Emma R.",
+      "role": "Yoga Instructor"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about BodyMaxx AI",
+    "items": [
+      {
+        "question": "How does the AI body scan work?",
+        "answer": "Our AI uses your phone's camera to create a 3D model of your body. It analyzes key measurements and body composition metrics using advanced computer vision algorithms, all processed locally on your device for privacy."
+      },
+      {
+        "question": "Is my data secure and private?",
+        "answer": "Absolutely. Your body scans are processed on-device and never uploaded to external servers. All personal data is encrypted and you have full control over what you share."
+      },
+      {
+        "question": "What devices are supported?",
+        "answer": "BodyMaxx AI will be available on iOS (iPhone 8 and newer) and Android (devices with ARCore support). We're optimizing for the best experience across all supported devices."
+      },
+      {
+        "question": "How accurate is the body composition analysis?",
+        "answer": "Our AI achieves accuracy comparable to professional DEXA scans for most body composition metrics. The more you use the app, the more accurate your personalized baseline becomes."
+      },
+      {
+        "question": "Will there be a free version?",
+        "answer": "Yes! We'll offer a free tier with basic scanning and tracking features. Premium features like advanced analytics, unlimited history, and personalized programs will be available via subscription."
+      },
+      {
+        "question": "When will the app launch?",
+        "answer": "We're currently in closed beta testing. Join the waitlist to be among the first to get access when we launch publicly. Early waitlist members will receive exclusive benefits."
+      }
+    ]
+  },
+  "footer": {
+    "tagline": "Transform your physique with artificial intelligence.",
+    "legal": "Legal Notice",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2025 BodyMaxx AI. All rights reserved."
+  }
+}
