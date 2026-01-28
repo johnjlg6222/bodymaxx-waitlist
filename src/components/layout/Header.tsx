@@ -7,9 +7,11 @@ import LanguageToggle from '../ui/LanguageToggle';
 
 export default function Header() {
   const t = useTranslations('header');
+  const [mounted, setMounted] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -24,7 +26,7 @@ export default function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'glass py-3' : 'py-5'
+        mounted && isScrolled ? 'glass py-3' : 'py-5'
       }`}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
