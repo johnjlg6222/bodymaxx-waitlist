@@ -4,11 +4,9 @@ import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import EmailForm from '../ui/EmailForm';
 import WaitlistCounter from '../ui/WaitlistCounter';
-import { useIsMounted } from '@/hooks/useIsMounted';
 
 export default function HeroSection() {
   const t = useTranslations('hero');
-  const mounted = useIsMounted();
 
   return (
     <section className="relative min-h-screen flex items-center pt-20">
@@ -21,8 +19,8 @@ export default function HeroSection() {
           <div className="space-y-8">
             {/* Badge */}
             <motion.div
-              initial={mounted ? { opacity: 0, y: 20 } : false}
-              animate={mounted ? { opacity: 1, y: 0 } : undefined}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
             >
               <span className="inline-flex items-center gap-2 px-4 py-2 glass rounded-full text-sm font-medium text-primary">
@@ -33,8 +31,8 @@ export default function HeroSection() {
 
             {/* Headline */}
             <motion.h1
-              initial={mounted ? { opacity: 0, y: 20 } : false}
-              animate={mounted ? { opacity: 1, y: 0 } : undefined}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight"
             >
@@ -43,8 +41,8 @@ export default function HeroSection() {
 
             {/* Tagline */}
             <motion.p
-              initial={mounted ? { opacity: 0, y: 20 } : false}
-              animate={mounted ? { opacity: 1, y: 0 } : undefined}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-2xl sm:text-3xl font-semibold text-gradient"
             >
@@ -53,8 +51,8 @@ export default function HeroSection() {
 
             {/* Description */}
             <motion.p
-              initial={mounted ? { opacity: 0, y: 20 } : false}
-              animate={mounted ? { opacity: 1, y: 0 } : undefined}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
               className="text-lg text-white/60 max-w-lg"
             >
@@ -63,8 +61,8 @@ export default function HeroSection() {
 
             {/* Email Form */}
             <motion.div
-              initial={mounted ? { opacity: 0, y: 20 } : false}
-              animate={mounted ? { opacity: 1, y: 0 } : undefined}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <EmailForm className="max-w-lg" />
@@ -76,8 +74,8 @@ export default function HeroSection() {
 
           {/* App Mockup */}
           <motion.div
-            initial={mounted ? { opacity: 0, scale: 0.95, x: 50 } : false}
-            animate={mounted ? { opacity: 1, scale: 1, x: 0 } : undefined}
+            initial={{ opacity: 0, scale: 0.95, x: 50 }}
+            animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
             className="relative hidden lg:block"
           >
@@ -119,13 +117,11 @@ export default function HeroSection() {
                       <div className="flex items-center justify-center py-6">
                         <div className="relative">
                           <div className="w-16 h-24 border-2 border-primary/50 rounded-full opacity-50" />
-                          {mounted && (
-                            <motion.div
-                              animate={{ y: [-30, 30] }}
-                              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                              className="absolute left-0 right-0 h-0.5 bg-primary shadow-[0_0_10px_rgba(10,132,255,0.8)]"
-                            />
-                          )}
+                          <motion.div
+                            animate={{ y: [-30, 30] }}
+                            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute left-0 right-0 h-0.5 bg-primary shadow-[0_0_10px_rgba(10,132,255,0.8)]"
+                          />
                         </div>
                       </div>
                       <div className="bg-primary/20 rounded-xl py-2 text-center">

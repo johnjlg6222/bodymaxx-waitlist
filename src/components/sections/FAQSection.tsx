@@ -3,7 +3,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTranslations } from 'next-intl';
-import { useIsMounted } from '@/hooks/useIsMounted';
 
 interface FAQItem {
   question: string;
@@ -12,7 +11,6 @@ interface FAQItem {
 
 export default function FAQSection() {
   const t = useTranslations('faq');
-  const mounted = useIsMounted();
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   // Get FAQ items from translations
@@ -49,7 +47,7 @@ export default function FAQSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={mounted ? { opacity: 0, y: 20 } : false}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
@@ -66,7 +64,7 @@ export default function FAQSection() {
         {/* FAQ Accordion */}
         <motion.div
           variants={containerVariants}
-          initial={mounted ? "hidden" : false}
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
           className="max-w-3xl mx-auto space-y-4"

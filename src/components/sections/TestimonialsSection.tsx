@@ -3,11 +3,9 @@
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import GlassCard from '../ui/GlassCard';
-import { useIsMounted } from '@/hooks/useIsMounted';
 
 export default function TestimonialsSection() {
   const t = useTranslations('testimonials');
-  const mounted = useIsMounted();
 
   const testimonials = [
     {
@@ -59,7 +57,7 @@ export default function TestimonialsSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={mounted ? { opacity: 0, y: 20 } : false}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
@@ -76,7 +74,7 @@ export default function TestimonialsSection() {
         {/* Testimonials Grid */}
         <motion.div
           variants={containerVariants}
-          initial={mounted ? "hidden" : false}
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
           className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto"

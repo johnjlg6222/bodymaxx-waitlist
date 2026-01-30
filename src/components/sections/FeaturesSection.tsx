@@ -3,11 +3,9 @@
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import GlassCard from '../ui/GlassCard';
-import { useIsMounted } from '@/hooks/useIsMounted';
 
 export default function FeaturesSection() {
   const t = useTranslations('features');
-  const mounted = useIsMounted();
 
   const features = [
     {
@@ -71,7 +69,7 @@ export default function FeaturesSection() {
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div
-          initial={mounted ? { opacity: 0, y: 20 } : false}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
@@ -88,7 +86,7 @@ export default function FeaturesSection() {
         {/* Features Grid */}
         <motion.div
           variants={containerVariants}
-          initial={mounted ? "hidden" : false}
+          initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
           className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
