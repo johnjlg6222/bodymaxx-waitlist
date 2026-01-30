@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from 'react';
 import { motion, useInView } from 'motion/react';
 import { useTranslations } from 'next-intl';
+import { useIsMounted } from '@/hooks/useIsMounted';
 
 interface WaitlistCounterProps {
   targetNumber?: number;
@@ -11,6 +12,7 @@ interface WaitlistCounterProps {
 
 export default function WaitlistCounter({ targetNumber = 2847, className }: WaitlistCounterProps) {
   const t = useTranslations('hero');
+  const mounted = useIsMounted();
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
   const [count, setCount] = useState(0);
@@ -36,11 +38,14 @@ export default function WaitlistCounter({ targetNumber = 2847, className }: Wait
     return () => clearInterval(timer);
   }, [isInView, targetNumber]);
 
+  // Use Intl.NumberFormat with explicit locale to avoid server/client mismatch
+  const formattedCount = mounted ? count.toLocaleString() : String(count);
+
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, y: 20 }}
-      animate={isInView ? { opacity: 1, y: 0 } : {}}
+      initial={mounted ? { opacity: 0, y: 20 } : false}
+      animate={mounted && isInView ? { opacity: 1, y: 0 } : undefined}
       transition={{ duration: 0.6, delay: 0.4 }}
       className={className}
     >
@@ -60,8 +65,8 @@ export default function WaitlistCounter({ targetNumber = 2847, className }: Wait
         </div>
         <p className="text-white/60 text-sm">
           {t('counterPrefix')}{' '}
-          <span className="text-white font-bold tabular-nums" suppressHydrationWarning>
-            {count.toLocaleString()}+
+          <span className="text-white font-bold tabular-nums">
+            {formattedCount}+
           </span>{' '}
           {t('counterSuffix')}
         </p>

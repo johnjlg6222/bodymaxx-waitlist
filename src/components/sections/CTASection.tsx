@@ -3,15 +3,17 @@
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
 import EmailForm from '../ui/EmailForm';
+import { useIsMounted } from '@/hooks/useIsMounted';
 
 export default function CTASection() {
   const t = useTranslations('cta');
+  const mounted = useIsMounted();
 
   return (
     <section className="relative z-10 py-24">
       <div className="container mx-auto px-4">
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={mounted ? { opacity: 0, scale: 0.95 } : false}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
@@ -26,7 +28,7 @@ export default function CTASection() {
             <div className="relative z-10 text-center max-w-3xl mx-auto">
               {/* Headline */}
               <motion.h2
-                initial={{ opacity: 0, y: 20 }}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
@@ -37,7 +39,7 @@ export default function CTASection() {
 
               {/* Description */}
               <motion.p
-                initial={{ opacity: 0, y: 20 }}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
@@ -48,7 +50,7 @@ export default function CTASection() {
 
               {/* Email Form */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
@@ -59,7 +61,7 @@ export default function CTASection() {
 
               {/* App Store Badges */}
               <motion.div
-                initial={{ opacity: 0, y: 20 }}
+                initial={mounted ? { opacity: 0, y: 20 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}

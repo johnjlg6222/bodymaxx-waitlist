@@ -2,9 +2,11 @@
 
 import { motion } from 'motion/react';
 import { useTranslations } from 'next-intl';
+import { useIsMounted } from '@/hooks/useIsMounted';
 
 export default function HowItWorksSection() {
   const t = useTranslations('howItWorks');
+  const mounted = useIsMounted();
 
   const steps = [
     {
@@ -50,7 +52,7 @@ export default function HowItWorksSection() {
       <div className="container mx-auto px-4 relative">
         {/* Section Header */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={mounted ? { opacity: 0, y: 20 } : false}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
@@ -69,7 +71,7 @@ export default function HowItWorksSection() {
           {/* Connection Line (Desktop) */}
           <div className="hidden lg:block absolute top-24 left-[10%] right-[10%] h-0.5">
             <motion.div
-              initial={{ scaleX: 0 }}
+              initial={mounted ? { scaleX: 0 } : false}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1, delay: 0.5 }}
@@ -81,7 +83,7 @@ export default function HowItWorksSection() {
             {steps.map((step, index) => (
               <motion.div
                 key={step.key}
-                initial={{ opacity: 0, y: 30 }}
+                initial={mounted ? { opacity: 0, y: 30 } : false}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-50px' }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
