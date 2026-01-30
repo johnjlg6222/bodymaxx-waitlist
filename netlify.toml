@@ -7,3 +7,11 @@
 
 [build.environment]
   NODE_VERSION = "20"
+
+# Rewrite root to default locale since next-intl middleware
+# doesn't run on Netlify's Next.js Runtime
+[[redirects]]
+  from = "/"
+  to = "/fr"
+  status = 200
+  force = true

@@ -6,19 +6,11 @@ import { getMessages, getTranslations } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import { routing } from '@/i18n/routing';
+import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 
 const ParticleBackground = dynamic(
   () => import('@/components/ui/ParticleBackground'),
-  { ssr: false }
-);
-
-const Header = dynamic(
-  () => import('@/components/layout/Header'),
-  { ssr: false }
-);
-
-const Footer = dynamic(
-  () => import('@/components/layout/Footer'),
   { ssr: false }
 );
 
