@@ -67,12 +67,6 @@ export default async function LocaleLayout({
     <html lang={locale} className={inter.variable}>
       <body className="bg-background text-white antialiased">
         <NextIntlClientProvider messages={messages}>
-          {/* Hidden Netlify form for detection */}
-          <form name="waitlist" method="POST" data-netlify="true" hidden>
-            <input type="email" name="email" />
-            <input type="text" name="locale" />
-          </form>
-
           <ParticleBackground />
           <Header />
           <main className="relative z-10">{children}</main>

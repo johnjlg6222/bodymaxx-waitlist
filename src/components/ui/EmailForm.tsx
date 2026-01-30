@@ -20,11 +20,12 @@ export default function EmailForm({ className }: EmailFormProps) {
     setStatus('loading');
 
     try {
-      const response = await fetch('/', {
+      const response = await fetch('/__forms.html', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
           'form-name': 'waitlist',
+          'bot-field': '',
           email,
           locale,
         }).toString(),
